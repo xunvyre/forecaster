@@ -1,0 +1,95 @@
+/*--------general styles*/
+
+:root
+{
+    --dark: #23374d;
+    --mid: #38a0dc;
+    --accent: #362486;
+    --white: #ffffff;
+    --grey: #898989;
+}
+
+*
+{
+    color: var(--dark);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.margin
+{
+    margin: 10px;
+}
+
+.subtitle
+{
+    font-weight: 700;
+    padding: 5px 0px;
+}
+
+/*--------header styles*/
+
+header
+{
+    text-align: center;
+    height: 55px;
+    background-image: linear-gradient(45deg, var(--mid) 0%, var(--accent) 90%);
+}
+
+header h1
+{
+    color: var(--white);
+    font-weight: 700;
+}
+
+/*--------sidebar styles*/
+
+.btn
+{
+    background-color: var(--grey);
+    color: var(--white);
+    margin: 5px 0px;
+    padding: 5px 0px;
+}
+
+.search-btn
+{
+    background-color: var(--mid);
+}
+
+.prev-searches
+{
+    border-top: 2px solid var(--dark);
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+#city
+{
+    height: 45px;
+}
+
+/*--------weather boxes styles*/
+.weather
+{
+    background-color: var(--dark);
+    padding: 5px 20px;
+    height: 230px;
+    width: 560px;
+}
+
+.weather h2, .weather p
+{
+    color: var(--white);
+}
+
+.forecast-box
+{
+    background-color: var(--dark);
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.forecast-box h4, .forecast-box p
+{
+    color: var(--white);
+}
