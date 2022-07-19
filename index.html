@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Weather Dashboard</title>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <div class="row margin">
+        <div id="sidebar" class="col-4 container">
+            <form id="city-search">
+                <label for="city">
+                    <h2 class="subtitle">Search for a City:</h2>
+                </label>
+                <input id="city" type="text" class="col-12" placeholder="Los Angeles" />
+                <button type="submit" class="col-12 btn search-btn">Search</button>
+            </form>
+            <div id="prev-searches" class="prev-searches">
+                <!--handled by JS-->
+            </div>
+        </div>
+
+        <main id="display" class="col-8">
+            <div id="todays-weather" class="col-12 weather">
+                <!--handled by JS-->
+            </div>
+            <div class="col-12">
+                <h3 class="subtitle row">Five-Day Forecast:</h3>
+                <div id="forecast" class="row">
+                    <!--handled by JS-->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
