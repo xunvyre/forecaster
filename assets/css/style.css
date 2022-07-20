@@ -82,6 +82,11 @@ header h1
     color: var(--white);
 }
 
+.weather h2
+{
+    font-weight: 700;
+}
+
 .forecast-box
 {
     background-color: var(--dark);

@@ -48,6 +48,27 @@ var displayTodaysInfo = function (data, city)
 {
     var bigWeatherBox = document.querySelector("#todays-weather");
     bigWeatherBox.innerHTML = "";
+
+    var bigTitle = document.createElement("h2");
+    bigTitle.textContent = data.name +" "+ todaysDate;
+
+    var bigIcon = document.createElement("img");
+    bigIcon.setAttribute("src", "https://openweathermap.org/img/w/" +data.weather[0].icon+ ".png");
+
+    var bigTemp = document.createElement("p");
+    bigTemp.textContent = "Temp: " +Math.round(data.main.temp)+ " °F";
+
+    var bigWSpeed = document.createElement("p");
+    bigWSpeed.textContent = "Wind Speed: " +Math.round(data.wind.speed)+ " MPH";
+
+    var bigHum = document.createElement("p");
+    bigHum.textContent = "Humidity: " +data.main.humidity+ "%";
+
+    bigWeatherBox.appendChild(bigTitle);
+    bigTitle.appendChild(bigIcon);
+    bigWeatherBox.appendChild(bigTemp);
+    bigWeatherBox.appendChild(bigWSpeed);
+    bigWeatherBox.appendChild(bigHum);
 };
 
 citySearchEl.addEventListener("submit", newSearch);
