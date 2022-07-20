@@ -104,6 +104,38 @@ var displayTodaysInfo = function (data)
 
             bigWeatherBox.appendChild(bigUV);
             bigUV.appendChild(value);
+
+            //then, loop over the next five days to display them in the five-day forecast section
+            var forecast = document.querySelector("#forecast");
+            forecast.innerHTML = "";
+
+            for (i = 1; i < 6; i++)
+            {
+                var foreBox = document.createElement("div")
+                foreBox.classList = "forecast-box";
+
+                var foreDate = document.createElement("h4");
+                foreDate.textContent = moment.unix(fiveDayData.daily[i].dt).format("MM/DD/YYYY");
+
+                var foreIcon = document.createElement("img");
+                foreIcon.setAttribute("src", "https://openweathermap.org/img/w/" +fiveDayData.daily[i].weather[0].icon+ ".png");
+
+                var foreTemp = document.createElement("p");
+                foreTemp.textContent = "Temp: " +Math.round(fiveDayData.daily[i].temp.day)+ " °F";
+
+                var foreSpeed = document.createElement("p");
+                foreSpeed.textContent = "Wind: " +Math.round(fiveDayData.daily[i].wind_speed)+ " MPH";
+
+                var foreHum = document.createElement("p");
+                foreHum.textContent = "Humidity: " +fiveDayData.daily[i].humidity+ "%";
+                
+                forecast.appendChild(foreBox);
+                foreBox.appendChild(foreDate);
+                foreBox.appendChild(foreIcon);
+                foreBox.appendChild(foreTemp);
+                foreBox.appendChild(foreSpeed);
+                foreBox.appendChild(foreHum);
+            }
         });
     });
 };
