@@ -73,8 +73,7 @@ header h1
 {
     background-color: var(--dark);
     padding: 5px 20px;
-    height: 230px;
-    width: 560px;
+    height: 240px;
 }
 
 .weather h2, .weather p
@@ -90,11 +89,26 @@ header h1
 .forecast-box
 {
     background-color: var(--dark);
-    margin-right: 10px;
+    margin: 0px 10px 10px 0px;
     padding: 10px;
 }
 
 .forecast-box h4, .forecast-box p
 {
     color: var(--white);
+}
+
+.uv1
+{
+    background-color: rgb(26, 122, 26);
+}
+
+.uv2
+{
+    background-color: rgb(255, 187, 0);
+}
+
+.uv3
+{
+    background-color: rgb(177, 24, 24);
 }
