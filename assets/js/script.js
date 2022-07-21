@@ -8,6 +8,7 @@ var newSearch = function(event)
 {
     event.preventDefault();
 
+    //get input information
     var chosenCity = cityInputEl.value.toLowerCase().trim();
 
     if (chosenCity)
@@ -49,7 +50,7 @@ var getWeatherInfo = function(city)
     });
 };
 
-var displayTodaysInfo = function (data)
+var displayTodaysInfo = function(data)
 {
     //create elements for today's weather
     var bigWeatherBox = document.querySelector("#todays-weather");
@@ -149,8 +150,15 @@ var createButton = function(data)
     newButton.classList = "btn col-12";
 
     appendButton.appendChild(newButton);
-    //store in localStorage
+
+
+    var prevSearch = function()
+    {
+        getWeatherInfo(newButton.textContent);
+    }
+    newButton.addEventListener("click", prevSearch);
 }
 
 //get prev searches on page load
+//event listener for search button
 citySearchEl.addEventListener("submit", newSearch);
